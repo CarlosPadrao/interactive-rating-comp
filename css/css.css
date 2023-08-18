@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    position: relative;
+    height: 100%;
+    transition: 5s ease;
+}
+
+body {
+    background-color:  hsl(216, 12%, 8%);
+    transition: 5s ease;
+}
+
+.popup {
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 28px;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 20px;
+}
+
+@media (max-width: 500px) {
+    .popup {
+        max-width: 355px;
+        padding: 18px;
+    }
+}
+
+.popup__before {
+    left: 0;
+}
+
+.icon_star {
+    margin-bottom: 20px;
+}
+
+.icon_star img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid hsl(213, 19%, 18%);
+    background: hsl(216deg 12% 54% / 27%);
+    border-radius: 50%;
+    padding: 14px 14px;
+}
+
+.content .text {
+    margin-bottom: 28px;
+}
+
+.content .text h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 26px;
+    margin-bottom: 15px
+}
+
+.content .text p {
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.stars_rate {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.stars_rate li {
+    list-style: none;
+    border-radius: 50%;
+    border: 1px;
+    background: hsl(216deg 12% 54% / 11%);
+    padding: 15px 20px;
+    color: hsl(217, 12%, 63%);
+    cursor: pointer;
+}
+
+.stars_rate li:hover {
+    background: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+    transition: 0.4s ease;
+}
+
+.stars_rate li.selected {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+}
+
+button[type=button] {
+    border: none;
+    outline: none;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 0;
+    border-radius: 20px;
+    color: hsl(25, 97%, 53%);
+    background: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+button[type=button]:hover {
+    background: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    transition: 0.4s ease;
+}
+
+.attribution {
+    color: #fff;
+    background: rgb(76 66 241);
+    font-size: 14px; 
+    text-align: center; 
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.attribution a {
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.attribution a:hover {
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+
+
+// after all
+
+.show {
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+.hide {
+    transition: 2.5s ease;
+    position: absolute;
+    left: -9999px;
+}
+
+.popup__after {
+    transition: .8s ease;
+}
+
+.popup__after.show {
+    position: relative;
+    left:0;
+}
+
+.popup__after .icon-thank-you {
+    text-align: center;
+}
+
+.popup__after .icon-thank-you img {
+    max-width: 100%;
+    height: auto;
+}
+
+.popup__after .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popup__after .content .response {
+    display: inline-flex;
+    color: hsl(25, 97%, 53%);
+    font-size: 14px;
+    padding: 4px 6px;
+    margin: 25px auto 30px;
+    background: hsl(216deg 12% 54% / 11%);
+}
+
+.popup__after .content h2 {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    font-size: 26px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.popup__after .content .sub {
+    color: hsl(217, 12%, 63%);
+    text-align: center;
+    background: none;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
